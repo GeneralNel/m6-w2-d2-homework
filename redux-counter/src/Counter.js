@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './Counter.css';
 
 const Counter = ({ count, dispatch }) => {
     const increment = () => {
@@ -11,12 +12,12 @@ const Counter = ({ count, dispatch }) => {
     };
     
     return (
-        <div>
+        <div className="counter-container">
             <h2>Counter</h2>
-            <div>
-                <span>{count}</span>
-                <button onClick={increment}>+</button>
-                <button onClick={decrement}>-</button>
+            <div className="counter-display">
+                <button className="counter-btn" onClick={decrement}>-</button>
+                <span className="counter-value">{count}</span>
+                <button className="counter-btn" onClick={increment}>+</button>
             </div>
         </div>
     );
