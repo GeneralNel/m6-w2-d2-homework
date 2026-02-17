@@ -11,6 +11,10 @@ const Counter = ({ count, dispatch }) => {
         dispatch({ type: 'DECREMENT' });
     };
     
+    const reset = () => {
+        dispatch({ type: 'RESET' });
+    };
+    
     return (
         <div className="counter-container">
             <h2>Counter</h2>
@@ -18,6 +22,9 @@ const Counter = ({ count, dispatch }) => {
                 <button className="counter-btn" onClick={decrement}>-</button>
                 <span className="counter-value">{count}</span>
                 <button className="counter-btn" onClick={increment}>+</button>
+            </div>
+            <div>
+                <button className="counter-btn" onClick={reset}>Reset</button>
             </div>
         </div>
     );
